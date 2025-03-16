@@ -13,3 +13,11 @@ culoarea principala
 #9C003F
 
 motivatie: Borna pozitiva in general e marcata cu rosu :D
+
+
+sectiuni:
+
+acasa
+informatii_teoretice
+produse
+FAQ
