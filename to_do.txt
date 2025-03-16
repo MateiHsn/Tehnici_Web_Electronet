@@ -1,0 +1,15 @@
+paleta de culori
+
+#9C003F
+#002F9C
+#009C09
+#9C6E00
+
+motivatie:
+    4 culori gasite de obicei la jumperi
+
+culoarea principala
+
+#9C003F
+
+motivatie: Borna pozitiva in general e marcata cu rosu :D
