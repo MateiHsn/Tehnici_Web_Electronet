@@ -1,0 +1,43 @@
+#grid-pagina{
+    display:grid;
+    grid-template-areas: "";
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    --spatiere: 100px;
+}
+
+main{
+    padding-left: var(--spatiere);
+    padding-right: var(--spatiere);
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:1200px){
+    html{
+        font-size: 14px;
+    }
+    body{
+        --spatiere: 50px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    html{
+        font-size: 10px;
+    }
+    nody{
+        --spatiere: 20px;
+    }
+}
