@@ -26,6 +26,15 @@ h3{
     font-size: 1.2rem;
 }
 
+#grid-pagina > *{
+    outline: 1px solid #9c003f;
+    padding: 4px;
+}
+
+#grid-pagina > figure{
+    margin:0px;
+}
+
 @media screen and (max-width:1200px){
     html{
         font-size: 14px;
