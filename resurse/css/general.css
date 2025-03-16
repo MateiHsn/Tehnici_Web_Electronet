@@ -9,7 +9,13 @@ header{
     background-color: #CCCCCC;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #9C6E00;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+nav{
+    background-color: #9C6E00;
+    padding: 20px;
+    border: 2px solid #9C6E00;
 }
 
 html{
