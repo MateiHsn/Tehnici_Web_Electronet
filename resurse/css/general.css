@@ -1,8 +1,8 @@
 #grid-pagina{
     display:grid;
-    grid-template-areas: "acasa informatii_teoretice"
-                         "produse"
-                         "FAQ";
+    grid-template-areas: "acasa acasa"
+                         "informatii_teoretice produse"
+                         "FAQ FAQ";
 }
 
 html{
@@ -34,6 +34,29 @@ h3{
 #grid-pagina > figure{
     margin:0px;
 }
+
+#grid-pagina > img{
+    width:100%;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+#acasa{
+    grid-area: acasa;
+}
+
+#informatii_teoretice{
+    grid-area: informatii_teoretice;
+}
+
+#produse{
+    grid-area: produse;
+}
+
+#FAQ{
+    grid-area: FAQ;
+}
+
 
 @media screen and (max-width:1200px){
     html{
