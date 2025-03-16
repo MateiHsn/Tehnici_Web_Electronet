@@ -1,6 +1,8 @@
 #grid-pagina{
     display:grid;
-    grid-template-areas: "";
+    grid-template-areas: "acasa informatii_teoretice"
+                         "produse"
+                         "FAQ";
 }
 
 html{
@@ -8,7 +10,7 @@ html{
 }
 
 body{
-    --spatiere: 100px;
+    --spatiere: 75px;
 }
 
 main{
