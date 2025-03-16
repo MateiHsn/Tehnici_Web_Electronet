@@ -4,6 +4,7 @@ paleta de culori
 #002F9C
 #009C09
 #9C6E00
+#CCCCCC
 
 motivatie:
     4 culori gasite de obicei la jumperi

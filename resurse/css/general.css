@@ -5,6 +5,13 @@
                          "FAQ FAQ";
 }
 
+header{
+    background-color: #CCCCCC;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #9C6E00;
+}
+
 html{
     font-size: 18px;
 }
