@@ -7,7 +7,7 @@ paleta de culori
 #CCCCCC
 
 motivatie:
-    4 culori gasite de obicei la jumperi
+    5 culori gasite de obicei la jumperi
 
 culoarea principala
 

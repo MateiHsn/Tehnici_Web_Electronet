@@ -13,9 +13,10 @@ header{
 }
 
 nav{
-    background-color: #9C6E00;
+    color: white;
+    background-color: #9C003F;
     padding: 20px;
-    border: 2px solid #9C6E00;
+    border: 2px solid #9C003F;
 }
 
 html{
@@ -23,7 +24,7 @@ html{
 }
 
 body{
-    --spatiere: 75px;
+    --spatiere: 50px;
 }
 
 main{
