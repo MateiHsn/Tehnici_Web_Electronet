@@ -1,0 +1,56 @@
+nav{
+    background-color: var(--culoare-background);
+    --inaltime-meniu: 40px;
+    --latime-buton: 25%;
+    height: var(--inaltime-meniu);
+}
+
+#hamburger, #ch-menu{
+    display: none;
+}
+
+ul.meniu ul{
+    display: none;
+    padding: 0;
+}
+
+ul.meniu{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.meniu li{
+    width: var(--latime-buton);
+    height: var(--inaltime-meniu);
+    border: 1px solid var(--culoare-background);
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    line-height: var(--inaltime-meniu);
+    transition: all 0.1s linear;
+}
+
+ul.meniu a,ul.meniu div{
+    color: #DDDDDD;
+    text-decoration: none;
+    transition: all .1s linear;
+    display: block;
+    height: 100%;
+}
+
+ul.meniu li:hover a,ul.meniu li:hover div{
+    color:#EEEEEE;
+    text-decoration: none;
+    transform: all .1s linear;
+    display: block;
+    height:100;
+}
+
+ul.meniu li:hover ul{
+    display: block;
+}
+
+ul.meniu li:hover{
+    background-color: #009C09;
+}

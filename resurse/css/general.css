@@ -5,6 +5,8 @@
                          "FAQ FAQ";
 }
 
+
+
 header{
     background-color: #CCCCCC;
     padding: 20px;
@@ -12,19 +14,16 @@ header{
     border-bottom: 2px solid #CCCCCC;
 }
 
-nav{
-    color: white;
-    background-color: #9C003F;
-    padding: 20px;
-    border: 2px solid #9C003F;
-}
+
 
 html{
     font-size: 18px;
 }
 
 body{
-    --spatiere: 50px;
+    --spatiere: 80px;
+    --culoare-background: #9C003F;
+    --culoare-deschisa: #9C6E00;
 }
 
 main{
@@ -42,7 +41,9 @@ h3{
 
 #grid-pagina > *{
     outline: 1px solid #9c003f;
-    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
 }
 
 #grid-pagina > figure{
