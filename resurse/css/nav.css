@@ -32,7 +32,7 @@ ul.meniu li{
 }
 
 ul.meniu a,ul.meniu div{
-    color: #DDDDDD;
+    color: #EEEEEE;
     text-decoration: none;
     transition: all .1s linear;
     display: block;
@@ -53,4 +53,6 @@ ul.meniu li:hover ul{
 
 ul.meniu li:hover{
     background-color: #009C09;
+    display:block;
+    position:relative;
 }
