@@ -22,8 +22,11 @@ html{
 
 body{
     --spatiere: 80px;
-    --culoare-background: #9C003F;
+    --culoare-inchisa: #9C003F;
     --culoare-deschisa: #9C6E00;
+    --culoare-border-deschisa: #009C09;
+    --culoare-border-inchisa: #002F9C;
+    --culoare-background: #EEEEEE;
 }
 
 main{

@@ -5,6 +5,8 @@ nav{
     height: var(--inaltime-meniu);
 }
 
+
+
 #hamburger, #ch-menu{
     display: none;
 }
