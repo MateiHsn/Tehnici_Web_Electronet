@@ -1,8 +1,14 @@
 #grid-pagina{
     display:grid;
-    grid-template-areas: "acasa acasa"
-                         "informatii_teoretice produse"
-                         "FAQ FAQ";
+
+    grid-template-areas: "acasa acasa acasa"
+                         "calendar tabel anunturi"
+                         "utilizator tabel anunturi"
+                         "utilizator utilizatori-online info-server"
+                         "informatii_teoretice informatii_teoretice informatii_teoretice"
+                         "produse produse produse"
+                         "FAQ FAQ FAQ";
+
 }
 
 
@@ -23,8 +29,8 @@ html{
 body{
     --spatiere: 80px;
     --culoare-inchisa: #9C003F;
-    --culoare-deschisa: #9C6E00;
-    --culoare-border-deschisa: #009C09;
+    --culoare-deschisa: #009C09;
+    --culoare-border-deschisa: #9C6E00;
     --culoare-border-inchisa: #002F9C;
     --culoare-background: #EEEEEE;
 }
@@ -61,6 +67,30 @@ h3{
 
 #acasa{
     grid-area: acasa;
+}
+
+tabel{
+    grid-area: tabel;
+}
+
+#calendar{
+    grid-area: calendar;
+}
+
+#anunturi{
+    grid-area: anunturi;
+}
+
+#utilizator{
+    grid-area: utilizator;
+}
+
+#utilizatori-online{
+    grid-area: utilizatori-online;
+}
+
+#info-server{
+    grid-area: info-server;
 }
 
 #informatii_teoretice{

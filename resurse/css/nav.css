@@ -1,5 +1,5 @@
 nav{
-    background-color: var(--culoare-background);
+    background-color: var(--culoare-inchisa);
     --inaltime-meniu: 40px;
     --latime-buton: 25%;
     height: var(--inaltime-meniu);
@@ -14,6 +14,7 @@ nav{
 ul.meniu ul{
     display: none;
     padding: 0;
+    background-color: var(--culoare-deschisa);
 }
 
 ul.meniu{
@@ -25,7 +26,7 @@ ul.meniu{
 ul.meniu li{
     width: var(--latime-buton);
     height: var(--inaltime-meniu);
-    border: 1px solid var(--culoare-background);
+    border: 1px solid var(--culoare-inchisa);
     box-sizing: border-box;
     text-align: center;
     font-weight: bold;
