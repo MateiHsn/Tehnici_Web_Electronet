@@ -2,7 +2,10 @@ nav{
     background-color: var(--culoare-inchisa);
     --inaltime-meniu: 40px;
     --latime-buton: 25%;
+    --raza-border: 10px;
     height: var(--inaltime-meniu);
+    border-radius: 10px;
+    
 }
 
 
@@ -15,12 +18,14 @@ ul.meniu ul{
     display: none;
     padding: 0;
     background-color: var(--culoare-deschisa);
+    border-radius: var(--raza-border);
 }
 
 ul.meniu{
     display: flex;
     list-style-type: none;
     padding: 0;
+    border-radius: var(--raza-border);
 }
 
 ul.meniu li{

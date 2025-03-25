@@ -9,18 +9,21 @@
                          "produse              produse              produse"
                          "FAQ                  FAQ                  FAQ";
 
-    row-gap: 30px;
-    column-gap: 30px;
-
+    gap: var(--spatiere-gridplus1000);
+    margin-left: var(--spatiere-stanga);
+    margin-right: var(--spatiere-dreapta);
 }
 
-
+#grid-pagina > *{
+    padding: 20px;
+}
 
 header{
     background-color: #CCCCCC;
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid #CCCCCC;
+    border-radius: 10px;
 }
 
 html{
@@ -33,12 +36,17 @@ html{
 }
 
 body{
-    --spatiere: 80px;
+    --spatiere-gridplus1000: 20px;
+    --spatiere-grid700: 5px;
+    --spatiere-grid1000: 10px;
+    --spatiere-stanga: 50px;
+    --spatiere-dreapta: 50px;
+    --spatiere: 50px;
     --culoare-inchisa: #9C003F;
-    --culoare-deschisa: #009C09;
-    --culoare-border-deschisa: #9C6E00;
-    --culoare-border-inchisa: #002F9C;
-    --culoare-background: #EEEEEE;
+    --culoare-deschisa: #F90064;
+    --culoare-border-deschisa: #FFB300;
+    --culoare-border-inchisa: #004CFF;
+    --culoare-background: #DDDDDD;
 }
 
 main{
@@ -129,8 +137,8 @@ tabel{
 #link-top:hover{
     opacity:1;
     box-shadow: #DDDDDD;
-    transform: all .5s linear;
-
+    transform: all 2s linear;
+    box-shadow: 10px 10px 20px #CCCCCC;
 }
 
 #triunghi{
@@ -144,7 +152,7 @@ tabel{
     transform: translateY(-10%);
 }
 
-#container-iframe{
+.container-iframe{
     width: 60%;
     max-width: 500px;
     min-width: 200px;
@@ -152,37 +160,52 @@ tabel{
     flex-direction: column-reverse;
 }
 
-#container-iframe > iframe{
+.container-iframe > iframe{
     width:100%;
 }
 
-#taburi-iframe{
+.taburi-iframe{
     display:flex;
     justify-content: center;
 }
 
-#taburi-iframe > a{
+.taburi-iframe > a{
     width: 100px;
     height: 50px;
     display: block;
-    border: 1px solid var(--culoare-border-inchisa);
-    background: var(--culoare-inchisa); 
+    border: 1px solid var(--culoare-background);
+    background: var(--culoare-deschisa); 
 }
 
-@media screen and (max-width:1200px){
+footer{
+    background: var(--culoare-background);
+}
+
+@media screen and (max-width:1000px){
     html{
         font-size: 14px;
+    }
+    #grid-pagina{
+        gap: var(--spatiere-grid1000);
     }
     body{
         --spatiere: 50px;
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 700px){
     html{
         font-size: 10px;
     }
-    nody{
+    #grid-pagina{
+        /* gap: var(--spatiere-grid700); */
+        display: block;
+    }
+    body{
         --spatiere: 20px;
+    }
+
+    #link-top{
+        display: none;
     }
 }
