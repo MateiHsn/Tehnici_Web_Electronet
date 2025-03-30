@@ -3,42 +3,20 @@
 <html lang="ro">
     <head>
         <title>Electronet</title>
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
-        <meta name="keywords" content="electronica, circuit, componente electronice"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="keywords" content="/, circuit, componente electronice"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
         <meta name="description" content="Magazinul TAU de electronice!"><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
-        <meta name="author" content="Matei Haisan">  <!-- autorul/autoarea paginii-->
-        <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png?" sizes="96x96" >
-        <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg?" >
-        <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico?" >
-        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png?" >
-        <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest?" >
-        <link rel="stylesheet" href="./resurse/css/general.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" >
-        <style>
-
-        </style>
+        <%- include("../fragmente/head.ejs") %>
    
     </head>
     <body>
         <link rel="stylesheet" href="resurse/css/nav.css">
-        <header>
-            <h1 style="color:#9c003f">Electronet</h1>
-        </header>
-        <nav> <!-- Task 1.6-->
-            <ul class="meniu">
-                <li><a href = "#acasa">Acasa</a></li>
-                <li><a href = "#informatii_teoretice">Informatii teoretice de ajutor:</a>
-                    <ul>
-                        <li><a href="#clipuri">Clipuri</a></li>
-                        <li><a href="#formule">Formule</a></li>
-                    </ul>
-                <li><a href="#FAQ">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        
+        <%- include("../fragmente/header.ejs") %>
+
         <main>
             <div id="grid-pagina">
+
 
 
             <section id="acasa">
@@ -47,7 +25,7 @@
                     De când am intrat pe piața de <b>componente electronice</b>, am oferit mereu cele mai bune servicii și produse pentru clienții noștri, indiferent de cererile <b>proiectelor</b>. Pe parcursul dezvoltării companiei noastre, am manageriat și un număr considerabil de forumuri în care ofeream sfaturi clienților doritori să se inițieze în acest domeniu vast.
                 </p>
                 <figure>
-                    <img id="arduino_img" src="./resurse/imagini/img/arduino-1080213.jpg" alt="Arduino project"> <!-- Task figure -->
+                    <img id="arduino_img" src="/resurse/imagini/img/arduino-1080213.jpg" alt="Arduino project"> <!-- Task figure -->
                 </figure>
             </section>
             
@@ -110,11 +88,11 @@
                 <picture>
                     <source
                         media="(min-width:650px)"
-                        srcset="./resurse/imagini/img/resistance-5722984_tab.jpg">
+                        srcset="/resurse/imagini/img/resistance-5722984_tab.jpg">
                     <source
                         media="(min-width:465px)"
-                        srcset="./resurse/imagini/img/resistance-5722984_mobil.jpg">
-                    <img src="./resurse/imagini/img/resistance-5722984.jpg"
+                        srcset="/resurse/imagini/img/resistance-5722984_mobil.jpg">
+                    <img src="/resurse/imagini/img/resistance-5722984.jpg"
                          alt="Rezistori">
                 </picture>
 
@@ -172,20 +150,20 @@
             </section>
             <section id = "produse">
                 <h2>Produse</h2>
-            <img src="./resurse/imagini/img/vacuum-tube-4525750.jpg" usemap="#image-map" alt="poza produse">
+            <img src="/resurse/imagini/img/vacuum-tube-4525750.jpg" usemap="#image-map" alt="poza produse">
 
             <map name="image-map">  
                 <area target="_blank" alt="Condensatoare" title="Condensatoare" href="Condensatoare" coords="346,353,100" shape="circle">
                 <area target="_blank" alt="Triode" title="Triode" href="Triode" coords="410,244,100" shape="circle">
             </map>
-            <iframe src="./resurse/pdf/lm555.pdf" width="800" height="500"></iframe>
-            <p><a href="./resurse/pdf/lm555.pdf" download>Descarca paginile de catalog pentru timer-ul 555, de la Texas Instruments.</a></p> <!-- Atentie la CALE!--> <!-- Task 1.11 -->
+            <iframe src="/resurse/pdf/lm555.pdf" width="800" height="500"></iframe>
+            <p><a href="/resurse/pdf/lm555.pdf" download>Descarca paginile de catalog pentru timer-ul 555, de la Texas Instruments.</a></p> <!-- Atentie la CALE!--> <!-- Task 1.11 -->
             </section>
             <section id="FAQ">
                 <h2>FAQ</h2>
                 <details> <!-- Task 1.12 -->
                     <summary>
-                        1. Ce recomandari aveti pentru incepatorii in electronica?
+                        1. Ce recomandari aveti pentru incepatorii in /?
                     </summary>
                     Pentru incepatori, o obligatie este sa inceapa cu sisteme de putere joasa, si <strong>sa nu creeze din prima circuite ce necesita alimentare <em>de la priza!!!</em></strong> <!-- Task 1.10 -->
                 </details>
@@ -194,17 +172,6 @@
             
         </div>  
         </main>
-        <footer> <!-- Task 1.13 -->
-            <section id="contact">
-            <h2>Contact</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.7378366924395!2d26.09700641212709!3d44.4355354709551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e1!3m2!1sro!2sro!4v1742213301108!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <p><a href="https://maps.app.goo.gl/fVRNerJMKR8cp6EB6" target="_blank">Strada Academiei 14, București, 010014</a></p>
-            <p><a href="https://wa.me/+40123456789" target="_blank">Whatsapp</a></p> 
-            <p><a href="mailto:asdf@asdf.com?subject=Contact">asdf@asdf.com</a></p>
-            <a href="#" title="Mergi sus" id="link-top"> <!-- Task 1.11 -->
-                <div id="triunghi">&#5123;</div>
-            </a>
-            </section>
-            <p><small><time datetime="2025-03-01 08:00">3 martie 2025</time> Copyright 2025 &copy;</small></p> <!-- Task 1.14 -->
-        </footer>
+        <%- include("../fragmente/footer.ejs") %>
     </body>    
 </html>

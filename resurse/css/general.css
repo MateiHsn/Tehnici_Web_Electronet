@@ -23,7 +23,7 @@ header{
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid #CCCCCC;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 html{
@@ -145,7 +145,7 @@ tabel{
     text-decoration: none;
     color: var(--culoare-deschisa);
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
     justify-content: center;
     display:inline-block;
     vertical-align: top;

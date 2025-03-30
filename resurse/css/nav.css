@@ -5,7 +5,8 @@ nav{
     --raza-border: 10px;
     height: var(--inaltime-meniu);
     border-radius: 10px;
-    
+    position: fixed;
+    top: 0;
 }
 
 

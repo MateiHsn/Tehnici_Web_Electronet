@@ -7,17 +7,29 @@ app = express();
 app.set("view engine", "ejs");
 
 console.log("Calea proiectului: "+__dirname);
+console.log("Calea Fisierului index.js: "+__filename);
+console.log("Calea folderului de lucru: "+process.cwd());
+
 
 
 app.get("/",function(req,res){
     res.render("pagini/index");
 });
 
+// app.get("/index/a",function(req,res){
+//     res.render("pagini/index");
+// });
+
 app.use("/resurse",express.static(path.join(__dirname,"resurse")));
 
 app.get(["/","/home","/index"],function(req,res){
     res.render("pagini/index");
 });
+
+app.get("/despre",function(req,res){
+    res.render("pagini/despre");
+});
+
 
 app.get("/fisier",function(req,res){
     res.sendFile(path.join(__dirname,"package.json"));
