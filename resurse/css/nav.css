@@ -4,18 +4,26 @@ nav{
     --latime-buton: 25%;
     --raza-border: 10px;
     height: var(--inaltime-meniu);
-    border-radius: 10px;
-    position: fixed;
-    top: 0;
+    border-radius: var(--raza-border);
+    top: 10;
+    bottom: 100;
 }
 
-
+.doto-font {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 100;
+}
 
 #hamburger, #ch-menu{
     display: none;
 }
 
 ul.meniu ul{
+    font-family: "Doto";
     display: none;
     padding: 0;
     background-color: var(--culoare-deschisa);
@@ -23,6 +31,7 @@ ul.meniu ul{
 }
 
 ul.meniu{
+    font-family: 'Doto';
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -49,7 +58,7 @@ ul.meniu a,ul.meniu div{
 }
 
 ul.meniu li:hover a,ul.meniu li:hover div{
-    color:#EEEEEE;
+    color:#FFFFFF;
     text-decoration: none;
     transform: all .1s linear;
     display: block;
