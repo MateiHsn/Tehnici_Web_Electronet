@@ -60,6 +60,15 @@ h3{
     font-size: 1.3rem;
 }
 
+th{
+    width: 100px;
+    text-align: center;
+}
+
+td{
+    width: 100px;
+    text-align: center;
+}
 
 header{
     background-color: #CCCCCC;
@@ -71,6 +80,8 @@ header{
 }
 
 #arduino_img{
+    justify-content: center;
+    width: 100%;
     max-width: 1000px;
     min-width: 100px;
 }
