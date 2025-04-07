@@ -20,6 +20,7 @@
 }
 
 #grid-pagina > *{
+    align-content: center;
     padding: 20px;
     outline: 4px solid var(--culoare-border-deschisa);
 }
@@ -51,6 +52,8 @@ html{
     font-size: 18px;
 }
 
+
+
 h2{
     font-family: "Doto" sans-serif;
     font-size: 1.6rem;
@@ -75,37 +78,40 @@ header{
     font-size: 30px;
     padding: 20px;
     text-align: center;
-    border: 5px solid #CCCCCC;
+    /* border: 5px solid #CCCCCC; */
     font-family: "Doto", sans-serif;
+    border-radius: 10px 20px;
 }
 
 #arduino_img{
     justify-content: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
     min-width: 100px;
 }
 
 body{
-    --spatiere-gridplus1000: 20px;
+    --spatiere-gridplus1000: 15px;
     --spatiere-grid700: 5px;
     --spatiere-grid1000: 10px;
-    --spatiere-stanga: 50px;
-    --spatiere-dreapta: 50px;
-    --spatiere-pagina: 50px;
+    --spatiere-stanga: 25px;
+    --spatiere-dreapta: 25px;
+    --spatiere-pagina: 25px;
     --culoare-inchisa: #9C003F;
     --culoare-deschisa: #F90064;
     --culoare-border-deschisa: #FFB300;
     --culoare-border-inchisa: #004CFF;
-    --culoare-background-deschisa: #DDDDDD;
-    --culoare-background-inchisa: #AAAAAA;
+    --culoare-background-deschisa: #EEEEEE;
+    --culoare-background-inchisa: #CCCCCC;
 }
+
 
 main{
     padding-left: var(--spatiere-pagina);
     padding-right: var(--spatiere-pagina);
+    background-color: var(--culoare-background-deschisa);
+    border-radius: 20px 20px;
 }
-
 
 h1{
     font-weight: 400;
@@ -260,7 +266,27 @@ embed{
     transform: translateY(-10%);
 }
 
-.container-iframe{
+math{
+    --marime-font-mare: 25px;
+    --marime-font-mica: 15px;
+    font-size: var(--marime-font-principal);
+}
+
+mi{
+    color: var(--culoare-deschisa);
+}
+
+msub > mn{
+    font-style: italic;
+    color: var(--culoare-inchisa);
+    font-size: var(--marime-font-mica);
+}
+
+b{
+    color: var(--culoare-inchisa);
+}
+
+.container-iframe{  
     width: 60%;
     max-width: 500px;
     min-width: 200px;
@@ -270,8 +296,9 @@ embed{
     border-radius: 10px;
     background-color: var(--culoare-background);
     position: relative;
-    padding: 20px;
-    margin: 15px;
+    padding: 10px;
+    margin-bottom: 50px;
+    justify-content: center;
 }
 
 .container-iframe > iframe{
@@ -286,20 +313,34 @@ embed{
     padding: 8px 15px;
     border: 2px solid var(--culoare-border-deschisa);
     border-top: none;
-    border-radius: 0 0 10px 10px;
-    background-color: var(--culoare-background);
+    border-radius:  0 0 10px 10px;
+    background-color: var(--culoare-deschisa);
     text-align: center;
     text-decoration: none;
     font-size: 14px;
-    color: black;
+    color: white;
     font-weight: bold;
 }
+
+.taburi-iframe > a:hover{
+    animation-name: tab-iframe-a;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    color: var(--culoare-deschisa);
+}
+
+@keyframes tab-iframe-a{
+    100%{
+        background-color: var(--culoare-background-deschisa);
+        color: var(--culoare-deschisa);
+    }
+} 
 
 .taburi-iframe{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 5px;
+    gap: var(--spatiere-gridplus1000);
     position: absolute;
     bottom: -35px;
     
@@ -319,7 +360,8 @@ container-iframe > iframe{
 }
 
 footer{
-    background: var(--culoare-background);
+    background: var(--culoare-background-inchisa);
+    border-radius: 20px 20px;
 }
 
 @media screen and (max-width:1000px){

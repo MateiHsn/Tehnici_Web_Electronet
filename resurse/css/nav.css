@@ -1,12 +1,15 @@
 nav{
+    font-family: "Doto" sans-serif;
+    font-weight: 900;
     background-color: var(--culoare-inchisa);
-    --inaltime-meniu: 40px;
+    --inaltime-meniu: 35px;
     --latime-buton: 25%;
     --raza-border: 10px;
     height: var(--inaltime-meniu);
-    border-radius: var(--raza-border);
-    top: 10;
-    bottom: 100;
+    /* border-radius: var(--raza-border); */
+    position: sticky;
+    top: 0;
+    
 }
 
 .doto-font {
@@ -27,7 +30,12 @@ ul.meniu ul{
     display: none;
     padding: 0;
     background-color: var(--culoare-deschisa);
-    border-radius: var(--raza-border);
+    width: 100%;
+    /* border-radius: var(--raza-border); */
+}
+
+ul.meniu ul > li{
+    width: 100%;
 }
 
 ul.meniu{
@@ -35,18 +43,19 @@ ul.meniu{
     display: flex;
     list-style-type: none;
     padding: 0;
-    border-radius: var(--raza-border);
+    /* border-radius: var(--raza-border); */
 }
 
 ul.meniu li{
     width: var(--latime-buton);
     height: var(--inaltime-meniu);
-    border: 1px solid var(--culoare-inchisa);
+    /* border: 1px solid var(--culoare-inchisa); */
     box-sizing: border-box;
     text-align: center;
     font-weight: bold;
     line-height: var(--inaltime-meniu);
     transition: all 0.1s linear;
+    list-style-type: none;
 }
 
 ul.meniu a,ul.meniu div{
@@ -73,4 +82,13 @@ ul.meniu li:hover{
     background-color: #009C09;
     display:block;
     position:relative;
+}
+
+
+@media screen and (max-width: 700px) {
+    
+    ul.meniu{
+        display: none;
+    }
+
 }

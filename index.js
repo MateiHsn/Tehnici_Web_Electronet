@@ -2,6 +2,40 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
+
+// var persoana = {
+//     nume : "Ionescu",
+//     prenume : "Gigel",
+
+// }
+
+// console.log(persoana.nume);
+// persoana.prop = "altceva";
+// console.log(persoana.nume);
+
+// console.log(persoana);
+// console.log(persoana["nume"]);
+
+// var a = {
+//     b : [
+//         10,
+//         {c: "ionel"},
+//         true,
+//         {vector: [1,23,{d:100}]}
+//     ]
+// }
+
+// console.log(a.b[1].c);
+// console.log(a.b[3].vector[2].d)
+
+// v = [10,27,11,30,28];
+
+// nrImpar = v.find(function(elem){
+//     return elem % 100 == 1;
+// })
+
+// console.log(nrImpar);
+
 app = express();
 
 app.set("view engine", "ejs");
@@ -19,7 +53,7 @@ function initErori(){
     for (let eroare of obGlobal.obErori.info_erori){
         eroare.imagine=path.join(obGlobal.obErori.cale_baza, eroare.imagine)
     }
-    console.log(obGlobal.obErori)
+    // console.log(obGlobal.obErori)
 
 }
 
@@ -71,12 +105,12 @@ app.get("/",function(req,res){
 app.use("/resurse",express.static(path.join(__dirname,"resurse")));
 
 app.get(["/","/home","/index"],function(req,res){
-    res.render("pagini/index");
+    res.render("pagini/index", {ip: req.ip});
 });
 
-app.get("/despre",function(req,res){
-    res.render("pagini/despre");
-});
+// app.get("/despre",function(req,res){
+//     res.render("pagini/despre");
+// });
 
 app.get("/fisier",function(req,res){
     res.sendFile(path.join(__dirname,"package.json"));
@@ -95,6 +129,36 @@ app.get("/abc",function(req,res,next){
     res.write((new Date())+'');
     res.end();
     // next();
+})
+
+app.get("/favicon.ico",function(req,res){
+    res.sendFile(path.join(__dirname,"resurse/imagini/favicon/favicon.ico"));
+});
+
+app.get("/*.ejs",function(req,res){
+    afisareEroare(400);
+})
+
+app.get("/*",function(req,res,next){
+    try{
+        res.render("pagini"+req.url,function(err,rezultatRandare){
+        if(err){
+            if(err.message.startWith("Failed to lookup view")){
+                afisareEroare(res,)
+            }else{
+                afisareEroare(res);
+            }
+        }else{
+            console.log(rezultatRandare);
+
+        }
+    });
+    }
+    catch (errRandare){
+        // if(errRandare.message.startWith("Cannot find module ")){
+// 
+        // }
+    }
 })
 
 
