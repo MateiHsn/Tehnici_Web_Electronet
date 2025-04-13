@@ -11,10 +11,12 @@
     </head>
     <body>
         <link rel="stylesheet" href="resurse/css/nav.css">
-        
+
         <%- include("../fragmente/header.ejs") %>
 
         <main>
+        <button type="button" class="btn btn-primary btn-lg">Stil-1-mare</button>
+
             <div id="grid-pagina">
 
 
@@ -170,8 +172,22 @@
                 <p><b>IP: </b> <%- locals.ip%> </p>
                         
             </section>
-            
+
         </div>  
+
+        <section id = "galerie-statica">
+            <!-- <h2>Galerie</h2> -->
+            <%  d = new Date(); 
+                vect_luni = ["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+                luna_curenta = vect_luni [d.getMonth()];
+                    
+            %>
+            
+            <!-- <figure></figure>
+            <figure></figure> -->
+
+        </section>
+
         </main>
         <%- include("../fragmente/footer.ejs") %>
     </body>    

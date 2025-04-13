@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-
+const sharp = require("sharp");
 
 // var persoana = {
 //     nume : "Ionescu",
@@ -41,8 +41,47 @@ app = express();
 app.set("view engine", "ejs");
 
 obGlobal = {
-    obErori: null
+    obErori: null,
+    obImagini: null
 }
+
+// vect_foldere = ["temp", "backup", "temp1"];
+// for(let folder of vect_foldere){
+//     let cale_folder = path.join(__dirname, folder)
+//     if(!fs.existsSync()){
+//         fs.mkdirSync(cale_folder);
+//     }
+// }
+
+// clip video 
+// 1. curs HTML
+// taguri video / audio
+// varianta a 2-a 
+
+function initImagini(){
+    var continut= fs.readFileSync(path.join(__dirname,"resurse/json/galerie.json")).toString("utf-8");
+
+    obGlobal.obImagini=JSON.parse(continut);
+    let vImagini=obGlobal.obImagini.imagini;
+
+    let caleAbs=path.join(__dirname,obGlobal.obImagini.cale_galerie);
+    let caleAbsMediu=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mediu");
+    if (!fs.existsSync(caleAbsMediu))
+        fs.mkdirSync(caleAbsMediu); 
+
+    //for (let i=0; i< vErori.length; i++ )
+    for (let imag of vImagini){
+        [numeFis, ext]=imag.fisier.split(".");
+        let caleFisAbs=path.join(caleAbs,imag.fisier);
+        let caleFisMediuAbs=path.join(caleAbsMediu, numeFis+".webp");
+        sharp(caleFisAbs).resize(300).toFile(caleFisMediuAbs);
+        imag.fisier_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mediu",numeFis+".webp" )
+        imag.fisier=path.join("/", obGlobal.obImagini.cale_galerie, imag.fisier )
+        
+    }
+    console.log(obGlobal.obImagini)
+}
+initImagini();
 
 function initErori(){
     let continut = fs.readFileSync(path.join(__dirname,"resurse/json/erori.json")).toString("utf-8");
@@ -92,8 +131,6 @@ console.log("Calea proiectului: "+__dirname);
 console.log("Calea Fisierului index.js: "+__filename);
 console.log("Calea folderului de lucru: "+process.cwd());
 
-
-
 app.get("/",function(req,res){
     res.render("pagini/index");
 });
@@ -102,10 +139,17 @@ app.get("/",function(req,res){
 //     res.render("pagini/index");
 // });
 
+
+app.get(/^\/resurse\/[a-zA-Z1-9_\/]*$/,function(req,res,next){
+    afisareEroare(res,403);
+})
+
 app.use("/resurse",express.static(path.join(__dirname,"resurse")));
+app.use("/node_modules", express.static(path.join(__dirname,"node_modules")));
+
 
 app.get(["/","/home","/index"],function(req,res){
-    res.render("pagini/index", {ip: req.ip});
+    res.render("pagini/index", {ip:req.ip,imagini:obGlobal.obImagini.imag})
 });
 
 // app.get("/despre",function(req,res){
@@ -116,24 +160,25 @@ app.get("/fisier",function(req,res){
     res.sendFile(path.join(__dirname,"package.json"));
 });
 
-app.get("/cerere",function(req,res){
-    res.send("<h1 style = 'color:green'>Buna seara!</h1>");
-});
+// app.get("/cerere",function(req,res){
+//     res.send("<h1 style = 'color:green'>Buna seara!</h1>");
+// });
 
-app.get("/abc",function(req,res,next){
-    res.write("Data de azi: ");
-    next();
-});
+// app.get("/abc",function(req,res,next){
+//     res.write("Data de azi: ");
+//     next();
+// });
 
-app.get("/abc",function(req,res,next){
-    res.write((new Date())+'');
-    res.end();
-    // next();
-})
+// app.get("/abc",function(req,res,next){
+//     res.write((new Date())+'');
+//     res.end();
+//     // next();
+// })
 
 app.get("/favicon.ico",function(req,res){
     res.sendFile(path.join(__dirname,"resurse/imagini/favicon/favicon.ico"));
 });
+
 
 app.get("/*.ejs",function(req,res){
     afisareEroare(400);
@@ -144,7 +189,7 @@ app.get("/*",function(req,res,next){
         res.render("pagini"+req.url,function(err,rezultatRandare){
         if(err){
             if(err.message.startWith("Failed to lookup view")){
-                afisareEroare(res,)
+                afisareEroare(res,err);
             }else{
                 afisareEroare(res);
             }
@@ -160,6 +205,7 @@ app.get("/*",function(req,res,next){
         // }
     }
 })
+
 
 
 app.listen(8080);

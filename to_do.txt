@@ -22,3 +22,15 @@ acasa
 informatii_teoretice
 produse
 FAQ
+
+
+de adaugat in index.ejs
+
+<% for (let imag of locals.imagini){ %>
+                <% if(imag.luni && imag.luni.includes(luna_curenta)){ %>
+                
+                <picture>
+                    <source srcset = "<%- imag.fisier_mediu %>" media = "screen and (max-width:1000px)" 
+                    <img src = "<%- imag.fisier %>" alt = "briose"></img>
+                </picture>
+            <% } %>
