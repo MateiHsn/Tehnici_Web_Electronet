@@ -1,0 +1,8 @@
+@media print{
+    nav{
+        display:none;
+    }
+    #grid-pagina{
+        display: block;
+    }
+}

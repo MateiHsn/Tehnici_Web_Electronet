@@ -154,7 +154,7 @@ body{
 main{
     padding-left: var(--spatiere-pagina);
     padding-right: var(--spatiere-pagina);
-    background-color: var(--culoare-background-deschisa);
+    /* background-color: var(--culoare-background-deschisa); */
     border-radius: 20px 20px;
 }
 
@@ -246,9 +246,9 @@ tabel{
     height:3rem;
     line-height:3rem;
     text-align:center;
-    border:4px solid var(--culoare-background-inchisa);
+    border:3px solid var(--culoare-background-inchisa);
     border-top-color:var(--culoare-inchisa);
-    border-radius:50%;
+    border-radius:2em;
 }
 
 #calendar > h2{
@@ -300,6 +300,8 @@ embed{
     min-width: 100px;
 }
 
+
+
 #triunghi{
     text-decoration: none;
     color: var(--culoare-deschisa);
@@ -335,22 +337,23 @@ b{
     width: 60%;
     max-width: 500px;
     min-width: 200px;
-    display:block;
-    flex-direction: column-reverse;
+    display:flex;
+    flex-direction: row;
     border: 2px solid var(--culoare-border-inchisa);
     border-radius: 10px;
     background-color: var(--culoare-background);
     position: relative;
     padding: 10px;
     margin-bottom: 50px;
-    justify-content: center;
+    justify-content: right;
 }
 
 .container-iframe > iframe{
     width:100%;
     height:300px;
     border: none;
-    border-radius:0px;
+    border-radius:10px;
+    z-index: -1;
 }
 
 .taburi-iframe > a{
@@ -359,11 +362,11 @@ b{
     border: 2px solid var(--culoare-border-deschisa);
     border-top: none;
     border-radius:  0 0 10px 10px;
-    background-color: var(--culoare-deschisa);
+    background-color: var(--culoare-background-deschisa);
     text-align: center;
     text-decoration: none;
     font-size: 14px;
-    color: white;
+    color: var(--culoare-inchisa);
     font-weight: bold;
 }
 
@@ -371,13 +374,12 @@ b{
     animation-name: tab-iframe-a;
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
-    color: var(--culoare-deschisa);
 }
 
 @keyframes tab-iframe-a{
     100%{
-        background-color: var(--culoare-background-deschisa);
-        color: var(--culoare-deschisa);
+        background-color: var(--culoare-inchisa);
+        color: var(--culoare-background-deschisa);
     }
 } 
 
@@ -406,7 +408,7 @@ container-iframe > iframe{
 
 footer{
     background: var(--culoare-background-inchisa);
-    border-radius: 20px 20px;
+    border-radius: 5px 5px;
 }
 
 @media screen and (max-width:1000px){
@@ -414,7 +416,9 @@ footer{
         font-size: 14px;
     }
     #grid-pagina{
+        width: 100%;
         gap: var(--spatiere-grid1000);
+        display:block;
     }
     #grid-pagina img{
         width: 75%;
@@ -435,7 +439,7 @@ footer{
         display: block;
     }
     #grid-pagina img{
-        width: 50%;
+        width: 100%;
         max-width: 150px;
         min-width: 50px;
     }

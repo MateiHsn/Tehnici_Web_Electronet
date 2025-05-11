@@ -5,11 +5,13 @@ nav{
     --inaltime-meniu: 35px;
     --latime-buton: 25%;
     --raza-border: 10px;
+    --marime-font-nav: 20px;
     height: var(--inaltime-meniu);
+    font-size: var(--marime-font-nav);
     /* border-radius: var(--raza-border); */
     position: sticky;
     top: 0;
-    
+    border-radius: 5px;
 }
 
 .doto-font {
@@ -19,10 +21,6 @@ nav{
   font-style: normal;
   font-variation-settings:
     "ROND" 100;
-}
-
-#hamburger, #ch-menu{
-    display: none;
 }
 
 ul.meniu ul{
@@ -84,11 +82,32 @@ ul.meniu li:hover{
     position:relative;
 }
 
+@keyframes menu-nav{
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 700px){
+    
+    nav > button{
+        display: none;
+    }
+
+}
 
 @media screen and (max-width: 700px) {
     
     ul.meniu{
         display: none;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav > input{
+        display:block;
     }
 
 }
