@@ -89,8 +89,6 @@ html{
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-  font-variation-settings:
-    "ROND" 100;
 }
 
 html{
@@ -228,9 +226,6 @@ tabel{
 }
 
 @keyframes animatie-link-top {
-    50%{
-        opacity: .625; 
-    }
     100%{
         opacity: 1;
     }
@@ -283,7 +278,6 @@ th,td{
     animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-direction: normal;
-    box-shadow: #DDDDDD;
     transform: all 2s linear;
     box-shadow: 10px 10px 5px #AAAA;
 }
@@ -346,6 +340,7 @@ b{
     padding: 10px;
     margin-bottom: 50px;
     justify-content: right;
+    z-index: -1;
 }
 
 .container-iframe > iframe{

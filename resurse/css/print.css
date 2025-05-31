@@ -1,8 +1,51 @@
 @media print{
+    #grid-pagina{
+        display:block;
+    }
+
+    #link-top{
+        display: none;
+    }
     nav{
         display:none;
     }
-    #grid-pagina{
-        display: block;
+
+    #site-name{
+        vertical-align: text-bottom;
+        page-break-after: always;
+        vertical-align: bottom;
+        justify-content: center;
     }
+
+    body::before{
+        content: "Acesta este un proiect scolar!";
+        position: fixed;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        width:80%;
+        padding: 0.5em 0;
+        background: white;
+        border: 1px dotted black;
+        text-align: center;
+        font-size: 1em;
+        z-index: 9999;
+    }
+
+    img,
+    embed,
+    video,
+    iframe,
+    #container-iframe,
+    #taburi-iframe,
+    figure,
+    figcaption{
+        display: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
 }
