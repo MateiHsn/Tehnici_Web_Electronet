@@ -1,15 +1,18 @@
-nav {
-  background-color: var(--culoare-inchisa);
-  --inaltime-meniu: 40px;
-  --latime-buton: 25%;
-  height: var(--inaltime-meniu);
-}
-
 #hamburger, #ch-menu {
   display: none;
 }
 
+nav {
+  background-color: var(--culoare-inchisa);
+  --inaltime-meniu: 30px;
+  --latime-buton: 20%;
+  height: var(--inaltime-buton);
+  position: sticky;
+  top: 0;
+}
+
 ul.meniu {
+  height: var(--inaltime-buton);
   display: flex;
   list-style-type: none;
   padding: 0;
@@ -17,41 +20,47 @@ ul.meniu {
 ul.meniu ul {
   display: none;
   padding: 0;
-  background-color: var(--culoare-deschisa);
 }
 ul.meniu li {
-  width: var(--latime-buton);
+  justify-content: center;
+  width: 100%;
   height: var(--inaltime-meniu);
-  border: 1px solid var(--culoare-inchisa);
-  box-sizing: border-box;
   text-align: center;
-  font-weight: bold;
-  line-height: var(--inaltime-meniu);
-  transition: all 0.1s linear;
+  font-family: "Doto";
+  font-weight: 900;
+  font-size: large;
+  transition: all 0.25s linear;
 }
-
-ul.meniu a, ul.meniu div {
-  color: #EEEEEE;
-  text-decoration: none;
-  transition: all 0.1s linear;
-  display: block;
-  height: 100%;
-}
-
-ul.meniu li:hover a, ul.meniu li:hover div {
-  color: #EEEEEE;
-  text-decoration: none;
-  transform: all 0.1s linear;
-  display: block;
-  height: 100;
-}
-
-ul.meniu li:hover ul {
-  display: block;
-}
-
 ul.meniu li:hover {
   background-color: #009C09;
-  display: block;
-  position: relative;
 }
+ul.meniu li:hover ul {
+  display: block;
+  width: 100%;
+  background-color: var(--culoare-deschisa);
+  position: relative;
+  list-style-type: none;
+  left: -1px;
+}
+ul.meniu i {
+  display: block;
+  color: white;
+}
+ul.meniu a {
+  font-size: large;
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes animatie_submeniu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=nav_1.css.map */

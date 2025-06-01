@@ -1,0 +1,11 @@
+nav{
+    --latime-buton:20%;
+}
+
+ul.meniu div.text-icon{
+    display: none;
+}
+
+ul.meniu li i{
+    display:none;
+}

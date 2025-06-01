@@ -1,6 +1,6 @@
 nav {
   --latime-buton:20%;
-  --inaltime-buton:25px;
+  --inaltime-buton:40px;
   --culoare-deschisa-meniu:var(--culoare-deschisa);
   --culoare-inchisa-meniu:var(--culoare-inchisa);
   background-color: var(--culoare-deschisa-meniu);
@@ -9,10 +9,6 @@ nav {
 }
 
 #hamburger, #ch-menu {
-  display: none;
-}
-
-ul.meniu div.imag-icon {
   display: none;
 }
 
@@ -37,19 +33,34 @@ ul.meniu ul {
   transform-origin: 50% 0;
 }
 ul.meniu li {
-  background-color: var(--culoare-deschisa-meniu);
+  font-family: 'Doto';
+  font-weight: 900;
+  /* font-size: medium; */
+  background-color: var(--culoare-inchisa-meniu);
   width: 100%;
   height: var(--inaltime-buton);
   line-height: var(--inaltime-buton);
   text-align: center;
-  font-weight: bold;
   transition: all 0.1s linear;
   box-sizing: border-box;
 }
-ul.meniu li:hover {
-  background-color: #009C09;
-  
+
+ul.meniu li:hover a{
+  transform: scale(1.1);
 }
+
+ul.meniu li:hover ul li:hover a{
+  box-shadow: inset 0 0 10px 1px #ffffff;
+  transition: 0.5s all linear;
+}
+ul.meniu > li:hover {
+  background-color: #009C09; 
+}
+/* 
+ul.meniu li:hover{
+  transform: scale(1.15);
+} */
+
 ul.meniu li:hover ul {
   display: block;
   width: 100%;
@@ -61,7 +72,7 @@ ul.meniu li div, ul.meniu li a{
   height: 100%;
   width: 100%;
   cursor: pointer;
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 ul.meniu li div:hover, ul.meniu li a:hover {
   color: white;
@@ -69,7 +80,6 @@ ul.meniu li div:hover, ul.meniu li a:hover {
 
 ul.meniu > li > ul > li a{
     width: 100%;
-
 }
 
 @keyframes afis_submeniu {
