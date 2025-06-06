@@ -1,4 +1,39 @@
 @media print{
+
+    p#banner{
+        display:block;
+        margin-top: 10px;
+        height: 20px;
+        text-align: center;
+        background: #eee;
+        width: 80%;
+        padding: 10%;
+        justify-content: center;
+        border: dotted #000000;
+    }
+
+    p#watermark{
+        display: block;
+        position:fixed;
+        top:80%;
+        left:5%;
+        width: 100px;
+        padding: 10px;
+        border: 10px double #000000;
+        opacity: 0.65;
+        background: white;
+    }
+
+    @media screen{
+        #banner{
+            display:none;
+        }
+    }
+
+    #container-iframe div{
+        display: none;
+    }
+
     #grid-pagina{
         display:block;
     }
@@ -6,31 +41,29 @@
     #link-top{
         display: none;
     }
+
     nav{
         display:none;
     }
 
     #site-name{
-        vertical-align: text-bottom;
-        page-break-after: always;
+        position: relative;
+        top:100px;
+        break-after: always;
         vertical-align: bottom;
         justify-content: center;
     }
 
-    body::before{
-        content: "Acesta este un proiect scolar!";
-        position: fixed;
-        top:0;
-        left:50%;
-        transform: translateX(-50%);
-        width:80%;
-        padding: 0.5em 0;
-        background: white;
-        border: 1px dotted black;
-        text-align: center;
-        font-size: 1em;
-        z-index: 9999;
+    footer{
+        break-before: always;
     }
+
+    h1{
+        font-size: 5em;
+        text-decoration: underline;
+    }
+
+
 
     img,
     embed,
@@ -46,6 +79,20 @@
     a{
         text-decoration: none;
         color: black;
+    }
+
+    @page{
+        size: A4;
+    }
+
+    @page:left{
+        margin-left: 2.5cm !important;
+        margin-right: 0.5cm !important;
+    }
+
+    @page:right{
+        margin-left: 0.5cm !important;
+        margin-right: 2.5cm !important;
     }
 
 }

@@ -6,6 +6,16 @@ ul.meniu div.text-icon{
     display: none;
 }
 
-ul.meniu li i{
+#icon{
+    padding: 10px;
+}
+
+#acasa{
     display:none;
+}
+
+ul.meniu i{
+    display:block;
+
+    z-index: 10;
 }

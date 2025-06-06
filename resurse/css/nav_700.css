@@ -1,5 +1,6 @@
 nav{
     --latime-buton: 100%;
+    background: white;
 }
 
 ul.meniu{
@@ -12,18 +13,64 @@ ul.meniu{
 }
 
 #hamburger{
-    display: block;
+    display: block !important;
     width: 30px;
     height: 30px;
     background-color: var(--culoare-inchisa-meniu);
     cursor: pointer;
-
+    padding: 0;
+    margin: 0;
 }
 
-#hamburger > span{
-    height: 5px;
+#hamburger > img{
+    display: block !important;
     width: 30px;
-    color: white;
+    height: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-#ch-menu:checked + ul.meniu
+ul.meniu a{
+    font-size: medium;
+}
+
+#ch-menu:checked + ul.meniu li:hover > a{
+    transform: scale(1.25);
+    transition: 0.1s linear;
+    box-shadow:none;
+}
+
+#ch-menu:checked + ul.meniu{
+    display:block;
+    font-size: medium;
+    animation-name:animatie_meniu_ecran_mic;
+    animation-direction:normal;
+    animation-duration: 0.25s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+#acasa{
+    display:none;
+    height: 0;
+    width: 0;
+}
+
+#icon{
+    margin: 5px;
+    margin: 0px;
+    left:10px;
+    display:block;
+}
+
+@keyframes animatie_meniu_ecran_mic {
+    0%{
+        transform: scaleX(0);
+        transform-origin: 0 0;
+    }
+    100%{
+        transform: scaleX(1);
+        transform-origin: 0 0;
+
+    }
+}

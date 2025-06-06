@@ -19,8 +19,8 @@
         <link href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@800,100&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/resurse/css/nav.css">
         <!-- <link rel="stylesheet" href="/resurse/css/nav_1.css"> -->
+        <link rel="stylesheet" href="/resurse/css/nav.css">
         <link rel="stylesheet" media="screen and (max-width:1000px)" href="/resurse/css/nav_1000.css">
         <link rel="stylesheet" media="screen and (max-width:700px)" href="/resurse/css/nav_700.css">
         <link rel="stylesheet" href="/resurse/css/print.css" media="print">
@@ -28,34 +28,35 @@
     <body>
 
         <header>
+            <p id="watermark">Haisan Matei</p>
+            <p id="banner">Acesta este un proiect școlar!</p>
             <h1 id="site-name" style="color:#9c003f">Electronet</h1>
         </header>
         <nav> <!-- Task 1.6-->
             <label id="hamburger" for="ch-menu">
-                <div>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
+                <img src="/resurse/imagini/img/Hamburger_icon_alb.png" alt="hamburger">
             </label>
             <input id="ch-menu" type="checkbox">
             <ul class="meniu">
-                <li><a href = "#acasa"><i class="fa-solid fa-house"></i>  Acasa</a></li>
-                <li><a href = "#informatii_teoretice"><i class="fa-sharp fa-solid fa-file"></i>  Teorie</a>
+                <li>
+                    <a id="acasa" href ="#">Acasa</a>
+                    <a id="acasa-icon" href="#"><i id="icon" class="fa-solid fa-house"></i></a>
+                    </li>
+                <li><a href = "#informatii_teoretice">Teorie</a>
                     <ul>
-                        <li><a href="#clipuri"><i class="fa-sharp fa-solid fa-video"></i>  Videoclipuri</a></li>
-                        <li><a href="#formule"><i class="fa-sharp fa-solid fa-pen"></i>  Formule</a></li>
+                        <li><a class="submeniu"href="#clipuri">Videoclipuri</a></li>
+                        <li><a class="submeniu"href="#formule">Formule</a></li>
                     </ul>
                 </li>
-                <li><a href="#produse"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Produse</a>
+                <li><a href="#produse">Produse</a>
                     <ul>
-                        <li><a href="#rezistoare">Rezistoare</a></li>
-                        <li><a href="#condensatoare">Condensatoare</a></li>
-                        <li><a href="#inductori">Inductori</a></li>
+                        <li><a class="submeniu"href="#rezistoare">Rezistoare</a></li>
+                        <li><a class="submeniu"href="#condensatoare">Condensatoare</a></li>
+                        <li><a class="submeniu"href="#inductori">Inductori</a></li>
                     </ul>
                 </li>
-                <li><a href="#FAQ"><i class="fa-sharp fa-solid fa-comment"></i>  FAQ</a></li>
-                <li><a href="#contact"><i class="fa-sharp fa-solid fa-phone"></i>  Contact</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <main>

@@ -1,66 +1,133 @@
+$latime-buton: 20%;
+$inaltime-buton: 40px;
+$culoare-deschisa-meniu: var(--culoare-deschisa);
+$culoare-inchisa-meniu: var(--culoare-inchisa);
+$culoare-hover: #009C09;
+
 #hamburger, #ch-menu{
-    display: none;
+    display:none;
 }
 
-nav{
-    background-color: var(--culoare-inchisa);
-    --inaltime-meniu: 30px;
-    --latime-buton: 20%;
-    height: var(--inaltime-buton);
-    position: sticky;
-    top:0;
-}
-
-
-ul.meniu{
-    height: var(--inaltime-buton);
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-
-    ul{
-        display:none;
+ul{
+    &.meniu{
+        display:flex;
+        list-style-type: none;
         padding: 0;
-    }
+        margin: 0;
+    
+        & ul{
+            display: none;
+            padding: 0;
+            list-style-type: none;
+            z-index: 3;
+            position: relative;
 
-    li{
-        justify-content: center;
-        width: 100%;
-        height: var(--inaltime-meniu);
-        text-align: center;
-        font-family: 'Doto';
-        font-weight: 900;
-        font-size: large;
-        transition: all 0.25s linear;
-
-        &:hover{
-            background-color: #009C09;
-            ul{
-
-                display:block;
-                width:100%;
-                background-color: var(--culoare-deschisa);
-                position: relative;
-                list-style-type: none;
-                left: -1px;
-            }
+            animation-name: afis_submeniu;
+            animation-duration: .2s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            transform-origin: 50% 0;
         }
 
-    }
+        & li{
+            font-family: 'Doto';
+            font-weight: 900;
+            background-color: $culoare-inchisa-meniu;
+            width: 100%;
+            height: $inaltime-buton;
+            line-height: $inaltime-buton;
+            text-align: center;
+            transition: all .1s linear;
+        }
 
-    i{
-        display:block;
-        color:white;
-    }
+        & > li > i{
+            display:none;
+        }
 
-    a{
-        font-size: large;
-        text-decoration: none;
-        color:white;
+        & li:hover a{
+            transform: scale(1.1);
+        }
+
+        & li:hover ul li:hover a{
+            transition: .5s all linear;
+        }
+
+        & > li:hover{
+            background-color: $culoare-hover;
+        }
+
+        & > li:hover ul{
+            display:block;
+            width: 100%;
+        }
+
+        & li i, & li a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            transition: all .2s linear;
+        }
+
+        & > li > ul > li a{
+            width: 100%;
+        }
     }
 }
 
-@keyframes animatie_submeniu {
+
+.submeniu{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+li{
+    &:hover > a.submeniu::before,
+    &:hover > a.submeniu::after{
+        animation-name: animatie_blur;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        top: 0;
+        transition: all .25s ease-in-out;
+        background: white;
+        filter: blur(2px);
+        display:block;
+        z-index: -1;
+    }
+}
+
+a{
+    &.submeniu::before{
+        left: 0;
+    }
+    &.submeniu::after{
+        right: 0;
+    }
+}
+
+@keyframes animatie_blur {
+    0%{
+        transform: scaleY(0);
+        transform-origin: 50% 0;
+    }
+    100%{
+        transform: scaleY(1);
+        transform-origin: 50% 0;
+    }
+}
+
+
+@keyframes afis_submeniu {
     0%{
         transform: scaleY(0);
         opacity: 0;

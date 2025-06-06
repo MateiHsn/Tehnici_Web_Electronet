@@ -41,6 +41,14 @@ table {
 	border-spacing: 0;
 } */
 
+p#watermark{
+    display:none;
+}
+
+p#banner{
+    display:none;
+}
+
 #grid-pagina{
     display:grid;
     grid-template-areas: "acasa                acasa                acasa"
@@ -52,12 +60,12 @@ table {
                          "FAQ                  FAQ                  FAQ";
 
     gap: var(--spatiere-gridplus1000);
-    margin-left: var(--spatiere-stanga);
-    margin-right: var(--spatiere-dreapta);
+    /* margin-left: var(--spatiere-stanga); */
+    /* margin-right: var(--spatiere-dreapta); */
 }
 
 #grid-pagina > section{
-    padding: 50px;
+    /* padding: 50px; */
 }
 
 #grid-pagina > * >  h2{
@@ -66,13 +74,13 @@ table {
 
 #grid-pagina > *{
     align-content: center;
-    padding: 20px;
+    /* padding: 20px; */
     outline: 4px solid var(--culoare-border-deschisa);
 }
-
+/* 
 #grid-pagina > figure{
     margin: 0;
-}
+} */
 
 #grid-pagina img{
     width: 100%;
@@ -146,8 +154,12 @@ body{
     --culoare-border-inchisa: #004CFF;
     --culoare-background-deschisa: #EEEEEE;
     --culoare-background-inchisa: #CCCCCC;
+
 }
 
+footer > #banner{
+    display:none;    
+}
 
 main{
     padding-left: var(--spatiere-pagina);
@@ -158,7 +170,6 @@ main{
 
 h1{
     font-weight: 900;
-    font-style: normal;
 }
 h2{
     font-size: 1.4rem;
