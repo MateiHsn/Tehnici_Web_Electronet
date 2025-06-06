@@ -27,7 +27,7 @@ ul.meniu ul {
   position: relative;
   /* margin-left: -1px; */
   animation-name: afis_submeniu;
-  animation-duration: 0.s;
+  animation-duration: 0.15s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
   transform-origin: 50% 0;
