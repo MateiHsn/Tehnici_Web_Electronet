@@ -6,12 +6,8 @@ ul.meniu div.text-icon{
     display: none;
 }
 
-#icon{
-    padding: 10px;
-}
-
 #acasa{
-    display:none;
+    display:block;
 }
 
 ul.meniu i{

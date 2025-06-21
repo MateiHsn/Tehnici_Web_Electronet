@@ -41,12 +41,60 @@ table {
 	border-spacing: 0;
 } */
 
+body{
+    --spatiere-gridplus1000: 15px;
+    --spatiere-grid700: 5px;
+    --spatiere-grid1000: 10px;
+    --spatiere-stanga: 25px;
+    --spatiere-dreapta: 25px;
+    --spatiere-pagina: 25px;
+    --culoare-inchisa: #9C003F;
+    --culoare-deschisa: #F90064;
+    --culoare-border-deschisa: #FFB300;
+    --culoare-border-inchisa: #004CFF;
+    --culoare-highlight: #009C09;
+    --culoare-background-deschisa: #EEEEEE;
+    --culoare-background-inchisa: #CCCCCC;
+    --culoare-umbra: #777777;
+}
+
 p#watermark{
     display:none;
 }
 
 p#banner{
     display:none;
+}
+
+a{
+    color: var(--culoare-inchisa);
+    background: radial-gradient(var(--culoare-umbra) 0%, var(--culoare-umbra) 40%, transparent 80%, transparent 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+}
+
+a[href^="http"]:visited{
+    color: var(--culoare-highlight);
+}
+
+a[href^="http"]:before{
+    content: "⮳";
+    font-size: 150%;
+}
+
+a[href^="http"]:hover::before{
+    color: var(--culoare-border-inchisa);
+    transition: 1s ease;
+}
+
+a[href^="http"]:hover{
+    background-size: 100%;
+    transition: 1s ease-in-out;
+}
+
+a[href^="http"]:active{
+    border: 1px solid var(--culoare-highlight);
 }
 
 #grid-pagina{
@@ -63,9 +111,21 @@ p#banner{
     /* margin-left: var(--spatiere-stanga); */
     /* margin-right: var(--spatiere-dreapta); */
 }
-
+/* 
 #grid-pagina > section{
-    /* padding: 50px; */
+    padding: 50px;
+} */
+
+
+h2,h3{
+    font-family: 'Doto';
+    font-weight: 900;
+}
+
+#clipuri a {
+    text-decoration: none;
+    font-family: 'Doto';
+    font-weight: 900;
 }
 
 #grid-pagina > * >  h2{
@@ -141,21 +201,7 @@ header{
     min-width: 100px;
 }
 
-body{
-    --spatiere-gridplus1000: 15px;
-    --spatiere-grid700: 5px;
-    --spatiere-grid1000: 10px;
-    --spatiere-stanga: 25px;
-    --spatiere-dreapta: 25px;
-    --spatiere-pagina: 25px;
-    --culoare-inchisa: #9C003F;
-    --culoare-deschisa: #F90064;
-    --culoare-border-deschisa: #FFB300;
-    --culoare-border-inchisa: #004CFF;
-    --culoare-background-deschisa: #EEEEEE;
-    --culoare-background-inchisa: #CCCCCC;
 
-}
 
 footer > #banner{
     display:none;    
@@ -457,4 +503,3 @@ footer{
         display: none;
     }
 }
-

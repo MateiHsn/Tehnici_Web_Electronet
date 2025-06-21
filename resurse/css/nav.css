@@ -45,19 +45,13 @@ ul.meniu li {
   /* box-sizing: border-box; */
 }
 
-ul.meniu > li > i{
-  display:none;
-}
-
-ul.meniu li:hover a{
+ul.meniu li:hover{
   transform: scale(1.1);
+  transform: all 0.1s linear;
+
 }
 
-ul.meniu li:hover ul li:hover a{
-  transition: 0.5s all linear;
-}
-
-ul.meniu > li:hover {
+ul.meniu li:hover {
   background-color: #009C09; 
 }
 
@@ -88,43 +82,6 @@ ul.meniu > li > ul > li a{
   cursor:pointer;
 }
 
-li:hover > a.submeniu::before,
-li:hover > a.submeniu::after{
-  animation-name: animatie_blur;
-  animation-duration: 0.25s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  content:"";
-  position: absolute;
-  width: 15px;
-  height: 100%;
-  top: 0;
-  transition: all .1s ease;
-  background: white;
-  filter:blur(2px);
-  display:block;
-  z-index: -1;
-}
-
-a.submeniu::before{
-  left:0;
-}
-
-a.submeniu::after{
-  right:0;
-}
-
-@keyframes animatie_blur {
-  0%{
-    transform: scaleY(0);
-    transform-origin: 50% 0;
-  }
-  100%{
-    transform: scaleY(1);
-    transform-origin: 50% 0;
-  }
-}
 
 @keyframes afis_submeniu {
   0% {

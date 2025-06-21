@@ -1,25 +1,31 @@
 <header>
-        <h1 style="color:#9c003f">Electronet</h1>
-    </header>
-    <nav> <!-- Task 1.6-->
-        <ul class="meniu">
-            <li><a href = "/index#acasa">Acasa</a></li>
-            <li><a href = "/index#informatii_teoretice">Informatii teoretice de ajutor:</a>
-                <ul>
-                    <li><a href="/index#clipuri">Clipuri</a></li>
-                    <li><a href="/index#formule">Formule</a></li>
-                </ul>
-            </li>
-            <li><div></div>
-                <ul>
-                    <li><a href="/index#produse">Toate</a></li>                
-                    <li><a href="/produse?tip=rezistor"></a></li>
-                    <li><a href="/produse?tip=condensator"></a></li>
-                    <li><a href="/produse?tip=tranzistor"></a></li>
-                </ul>
-            </li>            
-            <li><a href="/despre#FAQ">FAQ</a></li>
-            <li><a href="/despre#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
+            <p id="watermark">Haisan Matei</p>
+            <p id="banner">Acesta este un proiect școlar!</p>
+            <h1 id="site-name" style="color:#9c003f">Electronet</h1>
+        </header>
+        <nav> <!-- Task 1.6-->
+            <label id="hamburger" for="ch-menu">
+                <img src="/resurse/imagini/img/Hamburger_icon_alb.png" alt="hamburger">
+            </label>
+            <input id="ch-menu" type="checkbox">
+            <ul class="meniu">
+                <li>
+                    <a id="acasa" href="#">Acasa</a>
+                    </li>
+                <li><a href = "#informatii_teoretice">Teorie</a>
+                    <ul>
+                        <li><a class="submeniu"href="#clipuri">Videoclipuri</a></li>
+                        <li><a class="submeniu"href="#formule">Formule</a></li>
+                    </ul>
+                </li>
+                <li><a href="#produse">Produse</a>
+                    <ul>
+                        <li><a class="submeniu"href="#rezistoare">Rezistoare</a></li>
+                        <li><a class="submeniu"href="#condensatoare">Condensatoare</a></li>
+                        <li><a class="submeniu"href="#inductori">Inductori</a></li>
+                    </ul>
+                </li>
+                <li><a href="#despre">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>

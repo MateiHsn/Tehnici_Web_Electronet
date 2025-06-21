@@ -6,6 +6,7 @@ paleta de culori
 #9C6E00
 #DDDDDD
 #EEEEEE
+#222222
 motivatie:
     5 culori gasite de obicei la jumperi
 

@@ -1,33 +1,41 @@
-nav{
-    --latime-buton: 100%;
-    background: white;
-}
-
 ul.meniu{
     background-color:var(--culoare-inchisa-meniu);
     display:none;
+}
+
+nav{
+    --latime-buton: 100%;
+    background: white;
 }
 
 #ch-menu{
     display:none;
 }
 
+#hamburger > div > span{
+    display: block;
+    flex-direction: row;
+    margin: 5px;
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    border-radius:5px;
+}
+
+#hamburger > div{
+    position: absolute;
+    justify-content: center;
+    vertical-align: center;
+}
+
 #hamburger{
     display: block !important;
-    width: 30px;
-    height: 30px;
+    width: var(--inaltime-buton);
+    height: var(--inaltime-buton);
     background-color: var(--culoare-inchisa-meniu);
     cursor: pointer;
     padding: 0;
     margin: 0;
-}
-
-#hamburger > img{
-    display: block !important;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    padding: 0;
 }
 
 ul.meniu a{
