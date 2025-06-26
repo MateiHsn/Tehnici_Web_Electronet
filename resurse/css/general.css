@@ -55,7 +55,7 @@ body{
     --culoare-highlight: #009C09;
     --culoare-background-deschisa: #EEEEEE;
     --culoare-background-inchisa: #CCCCCC;
-    --culoare-umbra: #777777;
+    --culoare-umbra: #999999;
 }
 
 p#watermark{
@@ -66,7 +66,7 @@ p#banner{
     display:none;
 }
 
-a{
+a, footer>iframe, main a{
     color: var(--culoare-inchisa);
     background: radial-gradient(var(--culoare-umbra) 0%, var(--culoare-umbra) 40%, transparent 80%, transparent 100%);
     background-repeat: no-repeat;

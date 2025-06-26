@@ -13,8 +13,22 @@
 
         <main>
             
-            <p>Despre Magazin... Electronica... și multe altele!</p>
+            <h2>Despre electronică... componente... și multe altele!</h2>
+            <p>Am creat acest magazin/forum pentru a putea crea un spațiu în care experții în domeniu pot împărtăși informații între ei sau cu începătorii ce încearcă să înțeleagă bazele.</p>
+            <p>În cadrul magazinului nostru veți găsi tot ce căutați</p>
 
+            <section id="despre-electronet" style = "padding: 2rem;">
+            <div id="video-despre-electro" style="display:flex; justify-content: center;">
+                <video width="800" height="450" controls poster="/resurse/imagini/poster/pexels-pixabay-39290.jpg" preload="metadata">
+                    <source src="/resurse/video/3866849-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    <source src="/resurse/video/3866849-uhd_3840_2160_25fps.mkv" type="video/mkv">
+                    <source src="/resurse/video/3866849-uhd_3840_2160_25fps.wmv" type="video/wmv">
+                    <track default src="/resurse/subtitrari/Electro-RO.vtt" kind="captions" srclang="ro" label="Română" />                     
+                    <track src="/resurse/subtitrari/Electro-EN.vtt" kind="captions" srclang="en" label="Engleză (English)" />
+                    <track src="/resurse/subtitrari/Electro-DE.vtt" kind="captions" srclang="de" label="Germană (Deutsch)" />
+                </video>
+            </div>
+            </section>
         </main>
         <%- include("../fragmente/footer.ejs") %>
     </body>    
