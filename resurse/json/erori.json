@@ -10,7 +10,7 @@
             "identificator":404,
             "status":true,
             "titlu":"404 - Conținut inexistent!",
-            "text": "conținutul nu se află pe acest server!",
+            "text": "Conținutul nu se află pe acest server!",
             "imagine":"lupa.png"
         },
         {
@@ -24,7 +24,7 @@
             "identificator":400,
             "status":true,
             "titlu":"400 - bad request",
-            "text": "Cerere gresita",
+            "text": "Cerere greșită",
             "imagine":"interzis.png"
         },
         

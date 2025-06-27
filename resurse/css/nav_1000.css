@@ -6,6 +6,14 @@ ul.meniu div.text-icon{
     display: none;
 }
 
+#ch-menu{
+    display:none;
+}
+
+#hamburger{
+    display:none;
+}
+
 #acasa{
     display:block;
 }

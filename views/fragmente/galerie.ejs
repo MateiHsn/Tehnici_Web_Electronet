@@ -1,0 +1,47 @@
+<div id="galerie-statica">
+    <% d = new Date();
+
+    perioada_curenta = (d.getHours() >= 5 && d.getHours() < 12) ? "dimineata" : (d.getHours() >= 12 && d.getHours() < 20) ? "zi" : (d.getHours() >= 20 && d.getHours() < 5) ? "noapte" : "";
+
+    let counter_afisate = 0;
+    let total_valid = 0;
+
+    for(let imag of locals.imagini){
+
+        if(imag.perioada_zi){
+
+            let afiseaza = false;
+
+            if(imag.perioada_zi === perioada_curenta) afiseaza = true;
+
+            if(afiseaza){
+                counter_afisate++;
+                if(total_valid > 6 && counter_afisate > total_valid - total_valid % 3){
+                    afiseaza = false;
+                }
+            }
+
+            if(afiseaza){%>
+
+                <div id="celula-galerie">
+                    <figure>
+                        <picture>
+                          <source srcset="<%- imag.fisier_mic %>" media="(max-width: 700px)">
+                          <source srcset="<%- imag.fisier_mediu %>" media="(max-width: 1000px)">
+                          <source srcset="<%- imag.fisier%>" media="(max-width: 4000px)">
+
+                          <img src="<%- imag.fisier %>" alt="<%- imag.continut_alternativ %>" title="<%- imag.nume_poza %>">
+                        </picture>
+                    </figure>
+                    <figcaption><%- imag.descriere %></figcaption>
+                </div>
+
+            <% }
+
+        }
+
+    }
+
+    %>
+
+</div>

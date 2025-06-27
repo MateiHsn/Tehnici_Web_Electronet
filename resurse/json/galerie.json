@@ -1,41 +1,135 @@
 {
-	"cale_galerie":"resurse/imagini/galerie",
+	"cale_galerie":"./resurse/imagini/galerie",
 	"imagini": [
 		{
-			"fisier":"briose-frisca.png",
-			"descriere":"Brioșe",
-			"luni":["martie","februarie","noiembrie","aprilie", "decembrie"]
+			"fisier": "reparatie.jpg",
+			"nume_poza":"reparatie",
+			"continut_alternativ": "Reparație a unui circuit electronic",
+			"descriere": "Pe forumurile moderate de noi, puteți găsi soluții pentru orice probleme întâmpinați",
+			"perioada_zi": "zi",
+			"sursa": "https://www.flickr.com/photos/58072483@N02/19270557670",
+			"creator": "Dave Jones",
+			"licenta": "CC BY 2.0",
+			"licenta_url": "https://creativecommons.org/licenses/by/2.0/"
 		},
 		{
-			"fisier":"clatite.png",
-			"descriere":"Clătite cu dulceață",
-			"luni":["ianuarie","februarie","iunie"]
-			
+			"fisier":"7segment.jpg",
+			"nume_poza":"7segment",
+			"continut_alternativ": "Afișor cu 7 segmente",
+			"descriere": "Afișorul cu 7 segmente ajută mereu la vizualizarea informațiilor pe care le utilizați",
+			"perioada_zi":"zi"
 		},
 		{
-			"fisier":"gogosi.png",
-			"descriere":"Gogoși glazurate",
-			"luni":["ianuarie","noiembrie","iunie","martie","aprilie"]
+			"fisier":"condensatoare.jpg",
+			"nume_poza":"condensatoare",
+			"continut_alternativ": "Condensatoare pentru filtare",
+			"descriere": "Condensatoarele oferite de noi au performanțe sporite pentru fiecare aplicație pentru care sunt proiectate",
+			"perioada_zi":"zi"
 		},
 		{
-			"fisier":"tort-scortisoara.png",
-			"descriere":"Tort cu scorțisoară",
-			
-			"luni":["noiembrie","aprilie", "decembrie"]
+			"fisier":"LED1.jpg",
+			"nume_poza":"LED1",
+			"continut_alternativ": "LED de putere",
+			"descriere": "Folosiți LED-urile pentru a vă lumina viața!",
+			"perioada_zi":"noapte"
 		},
 		{
-			"fisier":"prajitura-ciocolata.png",
-			"descriere":"Prăjitură cu ciocolată",
-			
-			"luni":["noiembrie","aprilie", "decembrie"]
+			"fisier":"LED2.jpg",
+			"nume_poza":"LED2",
+			"continut_alternativ": "LED de putere pentru horticultură",
+			"descriere": "Folosiți LED-urile noastre pentru horticultură pentru a vă ajuta plantele să ducă o viață cât mai bună!",
+			"perioada_zi":"noapte"
 		},
 		{
-			"fisier":"tarta-afine.png",
-			"descriere":"Tartă cu afine"
+			"fisier":"LED3.jpg",
+			"nume_poza":"LED3",
+			"continut_alternativ": "Led mic și eficient",
+			"descriere": "Creați-vă propriile benzi de leduri folosind LED-urile SMD de la noi!",
+			"perioada_zi":"noapte"
 		},
 		{
-			"fisier":"tort-trandafiri.png",
-			"descriere":"Tort special"
+			"fisier":"Xtal.jpg",
+			"nume_poza":"Xtal",
+			"continut_alternativ": "Cristal de cuarț",
+			"descriere": "Nu pierdeți timpul cu oscilatoarele de cuarț pentru ceasuri!",
+			"perioada_zi":"dimineata"
+		},
+		{
+			"fisier":"alimentare.jpg",
+			"nume_poza":"alimentare",
+			"continut_alternativ": "Conector pentru alimentare DC-DC",
+			"descriere": "Alimentați-vă ideile cu acest conector DC-DC!",
+			"perioada_zi":"dimineata"
+		},
+		{
+			"fisier":"inductor.jpg",
+			"nume_poza":"inductor",
+			"continut_alternativ": "Inductor de tip choke",
+			"descriere": "Surse de curent constant cu ajutorul acestui inductor!",
+			"perioada_zi":"dimineata"
+		},
+		{
+			"fisier":"rezistor.jpg",
+			"nume_poza":"rezistor",
+			"continut_alternativ": "Rezistoare cu film subțire",
+			"descriere": "Protejați LED-urile cu ajutorul acestor rezistoare!",
+			"perioada_zi":"noapte"
+		},
+		{
+			"fisier":"senzor_optic.jpg",
+			"nume_poza":"senzor_optic",
+			"continut_alternativ": "Senzor optic de lumină vizibilă",
+			"descriere": "Lăsati-vă circuitele să vadă cu ajutorul acestui senzor de lumină vizibilă!",
+			"perioada_zi":"zi"
+		},
+		{
+			"fisier":"switchuri.jpg",
+			"nume_poza":"switchuri",
+			"continut_alternativ": "Comutatoare DIP",
+			"descriere": "Comutați pe drumul cel bun cu comutatoarele oferite pe magazinul nostru!",
+			"perioada_zi":"zi"
+		},
+		{
+			"fisier":"wifi.jpg",
+			"nume_poza":"wifi",
+			"continut_alternativ": "Modul de Wi-Fi",
+			"descriere": "Rămâneți conectat cu modulele noastre de Wi-Fi!",
+			"perioada_zi":"dimineata"
+		},
+		{
+			"fisier":"arduinoNANO.jpg",
+			"nume_poza":"arduinoNANO",
+			"continut_alternativ": "Placă de dezvoltare Arduino NANO",
+			"descriere": "Putere de procesare pentru orice proiect!",
+			"perioada_zi":"zi"
+		},
+		{
+			"fisier":"esp32.jpg",
+			"nume_poza":"esp32",
+			"continut_alternativ": "Placă de dezvoltare ESP32",
+			"descriere": "Putere de procesare și conectivitate prin Wi-Fi pentru orice proiect!",
+			"perioada_zi":"dimineata"
+		},
+		{
+			"fisier":"multimetru.jpg",
+			"nume_poza":"multimetru",
+			"continut_alternativ": "Multimetru Digital",
+			"descriere": "Depanare ușoară cu ajutorul multimetrelor oferite de noi!",
+			"perioada_zi":"dimineața"
+		},
+		{
+			"fisier":"semafor.jpg",
+			"nume_poza":"semafor",
+			"continut_alternativ": "Semafor cu header de tip male",
+			"descriere": "Controlați traficul cum doriți cu acest semafor digital!",
+			"perioada_zi":"noapte"
+		},
+		{
+			"fisier":"senzorumiditate.jpg",
+			"nume_poza":"senzorumiditate",
+			"continut_alternativ": "Senzor analogic de umiditate",
+			"descriere": "Aveți grijă de plantele dumneavoastră cu acest senzor de umiditate!",
+			"perioada_zi":"noapte"
 		}
 	]
 }

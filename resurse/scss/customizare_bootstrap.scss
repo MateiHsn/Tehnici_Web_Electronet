@@ -1,5 +1,10 @@
 @use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
 (
-    $primary: red,
-    $secondary:purple
+    $primary: #9C003F,
+    $secondary: #F90064,
+    // $bs-highlight-color: #009C09,
+    // $bs-link-color: #9C003F,
+    // $bs-link-hover-color: #009C09,
+    // $bs-primary-border-subtle: #FFB300,
+    // $bs-secondary-border-subtle: #004CFF
 )

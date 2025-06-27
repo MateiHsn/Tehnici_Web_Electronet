@@ -1,3 +1,4 @@
+
 ul.meniu{
     background-color:var(--culoare-inchisa-meniu);
     display:none;
@@ -56,19 +57,6 @@ ul.meniu a{
     animation-duration: 0.25s;
     animation-fill-mode:forwards;
     animation-iteration-count: 1;
-}
-
-#acasa{
-    display:none;
-    height: 0;
-    width: 0;
-}
-
-#icon{
-    margin: 5px;
-    margin: 0px;
-    left:10px;
-    display:block;
 }
 
 @keyframes animatie_meniu_ecran_mic {
