@@ -1,10 +1,17 @@
-<div id="galerie-statica">
+<section id="galerie-statica">
+
+    <div id="grid">
+
     <% d = new Date();
 
-    perioada_curenta = (d.getHours() >= 5 && d.getHours() < 12) ? "dimineata" : (d.getHours() >= 12 && d.getHours() < 20) ? "zi" : (d.getHours() >= 20 && d.getHours() < 5) ? "noapte" : "";
+    perioada_curenta = (d.getHours() >= 5 && d.getHours() < 12) ? "dimineata" : (d.getHours() >= 12 && d.getHours() < 20) ? "zi" : (d.getHours() >= 20 && d.getHours() < 5) ? "noapte" : null;
 
-    let counter_afisate = 0;
-    let total_valid = 0;
+    <!-- perioada_curenta = "dimineata" -->
+
+    let afisate = 0;
+    let valide = 0;
+
+    console.log(perioada_curenta)
 
     for(let imag of locals.imagini){
 
@@ -12,18 +19,20 @@
 
             let afiseaza = false;
 
-            if(imag.perioada_zi === perioada_curenta) afiseaza = true;
-
+            if(imag.perioada_zi == perioada_curenta) afiseaza = true;
+            
+            console.log(afiseaza)
             if(afiseaza){
-                counter_afisate++;
-                if(total_valid > 6 && counter_afisate > total_valid - total_valid % 3){
+                afisate++;
+                if(valide > 6 && afisate > valide - valide % 3){
                     afiseaza = false;
                 }
             }
+            console.log(afiseaza+'\n')
 
             if(afiseaza){%>
 
-                <div id="celula-galerie">
+                <div class="celula-galerie">
                     <figure>
                         <picture>
                           <source srcset="<%- imag.fisier_mic %>" media="(max-width: 700px)">
@@ -43,5 +52,5 @@
     }
 
     %>
-
-</div>
+    </div>
+  </section>

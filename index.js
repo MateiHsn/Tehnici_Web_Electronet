@@ -103,27 +103,31 @@ initErori();
 function initImagini(){
     var continut= fs.readFileSync(path.join(__dirname,"resurse/json/galerie.json")).toString("utf-8");
 
-    obGlobal.obImagini=JSON.parse(continut);
-    let vImagini=obGlobal.obImagini.imagini;
+    obGlobal.obImagini = JSON.parse(continut);
+    let vImagini = obGlobal.obImagini.imagini;
 
-    let caleAbs=path.join(__dirname,obGlobal.obImagini.cale_galerie);
-    let caleAbsMediu=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mediu");
+    let caleAbs = path.join(__dirname, obGlobal.obImagini.cale_galerie);
+    let caleAbsMediu = path.join(__dirname, obGlobal.obImagini.cale_galerie, "mediu");
+    let caleAbsMic = path.join(__dirname, obGlobal.obImagini.cale_galerie, "mic");
     if (!fs.existsSync(caleAbsMediu))
         fs.mkdirSync(caleAbsMediu);
 
-    //for (let i=0; i< vErori.length; i++ )
+    if (!fs.existsSync(caleAbsMic))
+        fs.mkdirSync(caleAbsMic);
+
     for (let imag of vImagini){
-        [numeFis, ext]=imag.fisier.split(".");
-        let caleFisAbs=path.join(caleAbs,imag.fisier);
-        let caleFisMediuAbs=path.join(caleAbsMediu, numeFis+".webp");
-        sharp(caleFisAbs).resize(300).toFile(caleFisMediuAbs);
-        imag.fisier_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mediu",numeFis+".webp" )
-        sharp(caleFisAbs).resize(150).toFile(caleFisMediuAbs);
-        imag.fisier_mic=path.join("/",obGlobal.obImagini.cale_galerie, "mic", numeFis+".webp")
-        imag.fisier=path.join("/", obGlobal.obImagini.cale_galerie, imag.fisier )
+        [numeFis, ext] = imag.fisier.split(".");
+        let caleFisAbs = path.join(caleAbs, imag.fisier);
+        let caleFisMediuAbs = path.join(caleAbsMediu, numeFis+".webp");
+        let caleFisMicAbs = path.join(caleAbsMic, numeFis+".webp");
+        sharp(caleFisAbs).resize(200).toFile(caleFisMediuAbs);
+        sharp(caleFisAbs).resize(100).toFile(caleFisMicAbs);
+        imag.fisier_mediu = path.join("/", obGlobal.obImagini.cale_galerie, "mediu", numeFis + ".webp" );
+        imag.fisier_mic = path.join("/", obGlobal.obImagini.cale_galerie, "mic", numeFis + "webp");
+        imag.fisier = path.join("/", obGlobal.obImagini.cale_galerie, imag.fisier );
         
     }
-    console.log(obGlobal.obImagini)
+    // console.log(obGlobal.obImagini)
 }
 initImagini();
 

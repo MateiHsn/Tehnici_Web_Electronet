@@ -1,0 +1,12 @@
+#grid-galerie{
+    display:block;
+}
+#grid{
+    display:block;
+}
+#grid-galerie .celula-galerie{
+    display:block;
+    width: 100%;
+    max-width: 300px;
+}
+

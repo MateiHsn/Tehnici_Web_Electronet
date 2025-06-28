@@ -1,0 +1,23 @@
+#grid-galerie{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    margin-left: 0;
+}
+
+#grid-galerie > #grid{
+    max-width: 400px;
+}
+
+.celula-galerie > picture{
+    display:grid;   
+    margin-left: 0;
+}
+
+#grid figcaption{
+    color:black;
+}
+
+.celula-galerie:nth-child(3n+1){grid-column: 1;}
+.celula-galerie:nth-child(3n+2){grid-column: 3;}
+.celula-galerie:nth-child(3n){grid-column: 2;}

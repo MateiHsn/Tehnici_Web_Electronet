@@ -1,45 +1,66 @@
 #grid-galerie{
     display:grid;
-    grid-template-areas: "galerie-statica galerie-statica galerie-statica";
-}
-
-#galerie-statica{
-    counter-reset: fig;
-    display:grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    gap: 10px;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 20px;
+    counter-reset: capital-counter;
+    margin-left: 90px;
 }
 
-#galerie-statica figure{
-    counter-increment: fig;
+#grid{
+    grid-area: galerie;
+    display:grid;
+    margin: 20px;
 }
 
-#galerie-statica figcaption::before{
-    content: counter(fig, )") ";
+#grid figure{
+    margin: 0;
 }
 
-#celula-galerie:nth-child(6n+1){grid-column: 1;}
-#celula-galerie:nth-child(6n+2){grid-column: 3;}
-
-#celula-galerie:nth-child(6n+3){grid-column: 2;}
-
-#celula-galerie:nth-child(6n+4){grid-column: 1;}
-#celula-galerie:nth-child(6n+5){grid-column: 3;}
-
-#celula-galerie{
-    filter: grayscale(100%);
-    transition: .5s ease-in-out;
+#grid figcaption::before{
+    content: counter(capital-counter, upper-alpha)". ";
+    counter-increment: capital-counter 1;
 }
 
-#celula-galerie figcaption{
-    text-shadow: 0 0 0 transparent;
-    transition: .5s ease-in-out;
+#grid .celula-galerie figure{
+    max-width: 300px;
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 100px;
 }
 
-#celula-galerie:hover{
-    filter:grayscale(0);
-    transform: rotate(360deg);
-    transition: .5s all ease-in-out;
+.celula-galerie figcaption{
+    margin-left: 100px;
 }
 
+#grid .celula-galerie > figure:hover{
+    transform: rotate(360deg) scale(1.5);
+    border: 30px var(--culoare-deschisa);
+    transition: all 0.25s ease-in-out;
+    z-index: 1;
+}
+
+.celula-galerie:hover > figure picture{
+    animation-name: rotunjire_border;
+    animation-timing-function: linear;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotunjire_border {
+    100%{
+        border-radius: 30px;
+    }
+}
+
+#grid figcaption{
+    font-size: large;
+    text-align: center;
+    color:white;
+    margin: 20px;
+}
+
+.celula-galerie:nth-child(3n+1){grid-column: 1;}
+.celula-galerie:nth-child(3n+2){grid-column: 2;}
+.celula-galerie:nth-child(3n){grid-column: 3;}
