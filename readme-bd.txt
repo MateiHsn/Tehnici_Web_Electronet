@@ -3,7 +3,7 @@ Atentie arhiva contine si node_modules insa e posibil sa aveti nevoie sa reinsta
 Creati o bază de date 
 - fie din pgadmin (interfata grafica) 
 - fie din consola psql cu comanda:
-CREATE DATABASE nume_baza_date ENCODING 'UTF-8' LC_COLLATE 'ro-RO-x-icu' LC_CTYPE 'ro_RO' TEMPLATE template0;
+CREATE DATABASE examen ENCODING 'UTF-8' LC_COLLATE 'ro-RO-x-icu' LC_CTYPE 'ro_RO' TEMPLATE template0;
 
 
 In pgadmin selectati baza voastra de date, deschideti o fereastra noua de query (Alt+Shift+Q) 

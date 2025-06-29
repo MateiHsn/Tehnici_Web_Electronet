@@ -53,7 +53,7 @@ ul.meniu li:hover{
 }
 
 ul.meniu li:hover {
-  background-color: #009C09; 
+  background-color: var(--culoare-highlight); 
 }
 
 ul.meniu li:hover ul {

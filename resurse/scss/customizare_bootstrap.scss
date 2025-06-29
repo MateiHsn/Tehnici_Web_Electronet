@@ -1,10 +1,53 @@
+    $primary: #9C003F;
+    $secondary: #F90064;
+    $light: #EEEEEE;
+    $dark: #555555;
+
+    $form-range-thumb-bg: $primary;
+    $form-range-track-bg: lighten($primary, 20%);
+    $form-range-thumb-width: 1.5rem;
+    $form-range-thumb-height: 1.5rem;
+
 @use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
 (
     $primary: #9C003F,
     $secondary: #F90064,
-    // $bs-highlight-color: #009C09,
-    // $bs-link-color: #9C003F,
-    // $bs-link-hover-color: #009C09,
-    // $bs-primary-border-subtle: #FFB300,
-    // $bs-secondary-border-subtle: #004CFF
+    $light: #EEEEEE,
+    $dark: #555555,
+
+    $form-range-thumb-bg: $primary,
+    $form-range-track-bg: lighten($primary, 20%),
+    $form-range-thumb-width: 1.5rem,
+    $form-range-thumb-height: 1.5rem,
+
+    $body-color: #EEEEEE,
+    $body-bg: #DDDDDD,
+
+    $h1-font-size: 2rem,
+    $h2-font-size: 1.5rem,
+    $h3-font-size: 1.25rem,
+    $h4-font-size: 1rem,
+    $h5-font-size: .75rem,
+    $h6-font-size: .5rem,
+
+    $link-color: #9C003F,
+    $link-hover-color: #009C09,
+    $link-decoration: none,
+
+
+    $font-family-base: "Doto",
+    $btn-border-radius: 10px,
+
+    $border-radius: 1rem,
+    $border-radius-lg: 1.5rem,
+    $border-radius-sm: .5rem,
+
+    $grid-breakpoints:(
+        sm:500px,
+        md:700px,
+        lg: 1000px,
+        xl: 2500px,
+        xxl: 4000px
+    ),
+
 )

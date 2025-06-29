@@ -1,10 +1,28 @@
 <header>
-            <p id="watermark">Haisan Matei</p>
+    <script src="/resurse/js/tema.js"></script>
+    <script src="/resurse/js/schimba_tema.js"></script>
+    <p id="watermark">Haisan Matei</p>
             <p id="banner">Acesta este un proiect școlar!</p>
             <div id="container-text-reflectat">
-             <h1 id="text" style="color:#9c003f">Electronet</h1>
-             <h1 id="text-reflectat" style="color:#9c003f">Electronet</h1>
+             <h1 id="text" >Electronet</h1>
+             <h1 id="text-reflectat">Electronet</h1>
             </div>
+            <div class="btn-group" role="group">
+        <input type="radio" class="btn-check" name="tema" id="tema-dark" value="dark" autocomplete="off">
+        <label class="btn btn-outline-primary d-flex align-items-center gap-1" for="tema-dark">
+            <i class="fa-solid fa-moon"></i>
+        </label>
+
+        <input type="radio" class="btn-check" name="tema" id="tema-light" value="light" autocomplete="off">
+        <label class="btn btn-outline-primary d-flex align-items-center gap-1" for="tema-light">
+            <i class="fa-solid fa-sun"></i>
+        </label>
+
+        <input type="radio" class="btn-check" name="tema" id="tema-alt" value="alt" autocomplete="off">
+        <label class="btn btn-outline-primary d-flex align-items-center gap-1" for="tema-alt">
+            <i class="fa-solid fa-bolt"></i>
+        </label>
+    </div>
         </header>
         <nav> <!-- Task 1.6-->
             <label id="hamburger" for="ch-menu">

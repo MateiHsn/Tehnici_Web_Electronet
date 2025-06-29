@@ -1,12 +1,15 @@
-#grid-galerie{
+#galerie-statica{
     display:block;
+    margin: auto;
+    justify-content: center;
 }
 #grid{
     display:block;
+    margin: auto;
 }
-#grid-galerie .celula-galerie{
-    display:block;
-    width: 100%;
-    max-width: 300px;
+
+.celula-galerie{
+    margin: auto;
 }
+
 

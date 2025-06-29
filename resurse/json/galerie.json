@@ -87,7 +87,7 @@
 			"nume_poza":"switchuri",
 			"continut_alternativ": "Comutatoare DIP",
 			"descriere": "Comutați pe drumul cel bun cu comutatoarele oferite pe magazinul nostru!",
-			"perioada_zi":"zi"
+			"perioada_zi":"dimineata"
 		},
 		{
 			"fisier":"wifi.jpg",
@@ -101,21 +101,21 @@
 			"nume_poza":"arduinoNANO",
 			"continut_alternativ": "Placă de dezvoltare Arduino NANO",
 			"descriere": "Putere de procesare pentru orice proiect!",
-			"perioada_zi":"zi"
+			"perioada_zi":"dimineata"
 		},
 		{
 			"fisier":"esp32.jpg",
 			"nume_poza":"esp32",
 			"continut_alternativ": "Placă de dezvoltare ESP32",
 			"descriere": "Putere de procesare și conectivitate prin Wi-Fi pentru orice proiect!",
-			"perioada_zi":"dimineata"
+			"perioada_zi":"zi"
 		},
 		{
 			"fisier":"multimetru.jpg",
 			"nume_poza":"multimetru",
 			"continut_alternativ": "Multimetru Digital",
 			"descriere": "Depanare ușoară cu ajutorul multimetrelor oferite de noi!",
-			"perioada_zi":"dimineata"
+			"perioada_zi":"zi"
 		},
 		{
 			"fisier":"semafor.jpg",

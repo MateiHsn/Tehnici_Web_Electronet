@@ -123,7 +123,7 @@ function initImagini(){
         sharp(caleFisAbs).resize(200).toFile(caleFisMediuAbs);
         sharp(caleFisAbs).resize(100).toFile(caleFisMicAbs);
         imag.fisier_mediu = path.join("/", obGlobal.obImagini.cale_galerie, "mediu", numeFis + ".webp" );
-        imag.fisier_mic = path.join("/", obGlobal.obImagini.cale_galerie, "mic", numeFis + "webp");
+        imag.fisier_mic = path.join("/", obGlobal.obImagini.cale_galerie, "mic", numeFis + ".webp");
         imag.fisier = path.join("/", obGlobal.obImagini.cale_galerie, imag.fisier );
         
     }

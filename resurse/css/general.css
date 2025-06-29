@@ -59,6 +59,37 @@ body{
     --culoare-umbra: #DDDDDD;
 }
 
+body.dark main{
+    background-color: var(--culoare-background-inchisa);
+    color: white;
+}
+
+body.dark main a{
+    color: white;
+}
+
+body.dark{
+    --culoare-inchisa: #69000C;
+    --culoare-deschisa: #C60031;
+    --culoare-border-deschisa: #CC8000;
+    --culoare-border-inchisa: #0019CC;
+    --culoare-highlight: #006906;
+    --culoare-background-deschisa: #888888;
+    --culoare-background-inchisa: #888888;
+    --culoare-umbra: #777777;
+}
+
+body.alt{
+    --culoare-inchisa: #009C09;
+    --culoare-deschisa: #9C6E00;
+    --culoare-border-deschisa: #002F9C;
+    --culoare-border-inchisa: #9C003F;
+    --culoare-highlight: #F90064;
+    --culoare-background-deschisa: #EEEEEE;
+    --culoare-background-inchisa: #999999;
+    --culoare-umbra: #777777;
+}
+
 p#watermark{
     display:none;
 }
@@ -250,7 +281,9 @@ hr{
     border:none;    
     }
 
-
+h1{
+    color: var(--culoare-inchisa);
+}
 
 #text {
     position: relative;
@@ -265,14 +298,20 @@ hr{
     transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translateX(40px) translateY(30px);
     mask-image: repeating-radial-gradient(circle at center bottom, black 0px, transparent 15px, black 30px);
     mask-repeat: repeat;
-    mask-size: 100% 100%;
+    mask-size: 100% 200%;
 }
 
 #text:hover + #text-reflectat{
     animation-name:animatie-valuri-reflexie;
     animation-timing-function:linear;
-    animation-duration:1s;
+    animation-duration:2.5s;
     animation-iteration-count:infinite;
+}
+
+
+
+iframe#harta{
+    max-width: 700px;
 }
 
 @keyframes animatie-valuri-reflexie {
@@ -284,8 +323,6 @@ hr{
 #text-reflectat{
     margin-bottom: 0px;
 }
-
-
 
 *::selection{
     color: var(--culoare-border-deschisa);

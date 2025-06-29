@@ -4,14 +4,23 @@
 
     <% d = new Date();
 
-    perioada_curenta = (d.getHours() >= 5 && d.getHours() < 12) ? "dimineata" : (d.getHours() >= 12 && d.getHours() < 20) ? "zi" : (d.getHours() >= 20 && d.getHours() < 5) ? "noapte" : null;
+    perioada_curenta = (d.getHours() >= 5 && d.getHours() < 12) ? "dimineata" : (d.getHours() >= 12 && d.getHours() < 20) ? "zi" : (d.getHours() >= 20 || d.getHours() < 5) ? "noapte" : null;
 
     <!-- perioada_curenta = "dimineata" -->
+
+
+    console.log(perioada_curenta)
 
     let afisate = 0;
     let valide = 0;
 
-    console.log(perioada_curenta)
+    for(let imag of locals.imagini){
+      if(imag.perioada_zi == perioada_curenta)
+        valide++;
+    }
+
+    if(valide % 3 != 0)
+      valide -= valide % 3;
 
     for(let imag of locals.imagini){
 
@@ -21,14 +30,12 @@
 
             if(imag.perioada_zi == perioada_curenta) afiseaza = true;
             
-            console.log(afiseaza)
             if(afiseaza){
                 afisate++;
-                if(valide > 6 && afisate > valide - valide % 3){
+                if(valide > 6 && afisate > valide){
                     afiseaza = false;
                 }
             }
-            console.log(afiseaza+'\n')
 
             if(afiseaza){%>
 
